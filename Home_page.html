@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="Home_page.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+
+        <h1>Home page</h1>
+        <i class="fa-solid fa-book-open" id="header-book"></i>
+        <i class="fa-regular fa-bell" id="bell"></i>
+        <i class="fa-solid fa-user" id="user"></i>
+        <select class="admin_user" onchange="window.location.href = this.value">
+            <option value="">Login</option>
+            <option value="login_page.html">Admin</option>
+        </select>
+        <p>Manage Books, Students and Library Resources</p>
+    </header>
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Dashboard</a></li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label"><i class="fa-solid fa-user-plus"></i>
+                    <select class="sidebar-select" onchange="navigateFromSidebar(this)">
+                        <option value="">Add member</option>
+                        <option value="Add_student.html">Add Students</option>
+                        <option value="Add_teacher.html">Add Teachers</option>
+                        <option value="Add_other_member.html">Other members</option>
+                    </select>
+                </div>
+
+            </li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label"><i class="fa-solid fa-user-minus"></i>
+                    <select class="sidebar-select" onchange="navigateFromSidebar(this)">
+                        <option value="">Remove member</option>
+                        <option value="Remove_student.html">Remove Students</option>
+                        <option value="Remove_teacher.html">Remove Teachers</option>
+                        <option value="Remove_other_member.html">Other members</option>
+                    </select>
+                </div>
+                <div class="sidebar-submenu"></div>
+            </li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label"><i class="fa-solid fa-book"></i>
+                    <select class="sidebar-select" onchange="navigateFromSidebar(this)">
+                        <option value="">Books Issue</option>
+                        <option value="Issue_student.html">Students</option>
+                        <option value="Issue_teacher.html">Teacher</option>
+                        <option value="Issue_other_member.html">Other members</option>
+                    </select>
+                </div>
+                <div class="sidebar-submenu"></div>
+            </li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label"><i class="fa-solid fa-rotate-left"></i>
+                    <select class="sidebar-select" onchange="navigateFromSidebar(this)">
+                        <option value="">Return Books</option>
+                        <option value="Return_student.html">Students</option>
+                        <option value="Return_teacher.html">Teacher</option>
+                        <option value="Return_other_member.html">Other members</option>
+                    </select>
+                </div>
+                <div class="sidebar-submenu">
+            </li>
+            <li><a href="#"><i class="fa-solid fa-file-lines"></i> Report</a></li>
+            <li><a href="#" class="help-link"><i class="fa-solid fa-circle-question help-icon"></i> Help</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+            </div>
+        </ul>
+    </aside>
+    <main>
+
+        <div class="banner">
+            <img src="library.png" alt="image">
+            <h2 class="welcome">Welcome to Home page</h2>
+            <p class="manage_res">Manage library resources efficiently and effectively </p>
+        </div>
+        <div class="items">
+            <div class="total_books">
+                <div class="items-icon total-books">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h4>Total Books</h4>
+                <p>Books in library </p>
+                <button class="items_button">View Details</button>
+            </div>
+            <div class="total_students">
+                <div class="items-icon total-students">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h4>Total Students</h4>
+                <p>Registered Students </p>
+                <button class="items_button">View Details</button>
+            </div>
+            <div class="issued_books">
+                <div class="items-icon issued-books">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+                <h4>Issued Books</h4>
+
+                <p>Currently Issued </p>
+                <button class="items_button">View Details</button>
+            </div>
+            <div class="overdue_books">
+                <div class="items-icon overdue-books">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <h4>Overdue Books</h4>
+                <p>Require attention </p>
+                <button class="items_button">View Details</button>
+            </div>
+        </div>
+
+        <div class="finder">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass magnifying-glass"></i>
+                <label for="search" class="search_text">Search Books
+                    <input id="search" type="text" placeholder="Search here">
+                </label>
+            </div>
+            <div class="search_book">
+
+                <label for="book" class="book_text">Book Name
+                    <input id="book" placeholder="Enter book name">
+                </label>
+            </div>
+
+
+            <div class="select">
+                <label for="category" class="category"><span class="label_category">Category</span>
+                    <select id="category">
+                        <option>Select option</option>
+                        <option value="">Computer Science & Engineering</option>
+                        <option value="">Civil Engineerig</option>
+                        <option value="">Electrical Engineering</option>
+                        <option value="">Mechanical Engineering</option>
+                        <option value="">Electronic Engineering</option>
+                    </select>
+                </label>
+
+
+                <label for="author" class="book_auther"><span class="label_author">Author</span>
+                    <select id="author">
+                        <option>Select option</option>
+                        <option value="Bajarne Stroustrup">Bajarne Stroustrup</option>
+                        <option value="Dennis Ritchie">Dennis Ritchie</option>
+                        <option value="Robert C.Martin">Robert C.Martin</option>
+                        <option value="Herbert Schildt">Herbert Schildt</option>
+                        <option value="Cheatan Bhagat">Cheatan Bhagat</option>
+                        <option value="R.K. Narayan">R.K. Narayan</option>
+                    </select>
+                </label>
+
+
+                <label for="status" class="status"><span class="label_status">Status</span>
+                    <select id="status">
+                        <option>Select option</option>
+                        <option value="Available">Available</option>
+                        <option value="Issued">Issued</option>
+                        <option value="Reserved">Reserved</option>
+                        <option value="Lost">Lost</option>
+                        <option value="Out of stock">Out of stock</option>
+                        <option value="Damaged">Damaged</option>
+                        <option value="Under Maintenance">Under Maintenance</option>
+                    </select>
+                </label>
+
+            </div>
+            <button class="search_button">search</button>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <address class="child-footer">
+            <div><i class="fa-solid fa-location"></i>
+                <h3>Address</h3>
+                <p>Goverment Polytechnic Khagaria</p>
+                <p>Mahaddipur, Pasraha</p>
+                <p> Bihar, India</p>
+            </div>
+            <div><i class="fa-solid fa-phone"></i>
+                <h3>Contact</h3>
+                <p>8796342646</p>
+                <p>rajneeshkumar7861@gmail.com</p>
+            </div>
+            </div>
+            <div><i class="fa-solid fa-file-lines"></i>
+                <h3>Report</h3>
+                <p>Help</p>
+                <p>About</p>
+            </div>
+        </address>
+        <p>@2026 Home page</p>
+    </footer>
+
+    <script src="website.js"></script>
+
+</body>
+
+</html>
+
+<!-- background: linear-gradient(135deg, #16161653, rgba(81, 44, 223, 0.95)); -->
