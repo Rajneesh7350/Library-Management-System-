@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Other Member | Library Management</title>
+    <link rel="stylesheet" href="library_theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="add-member-page">
+    <header>
+        <h1>Library Management System</h1>
+        <i class="fa-solid fa-book-open" id="header-book"></i>
+        <i class="fa-regular fa-bell" id="bell"></i>
+        <i class="fa-solid fa-user" id="user"></i>
+        <select class="admin_user" onchange="window.location.href = this.value">
+            <option value="">Login</option>
+            <option value="login_page.html">Admin</option>
+        </select>
+        <p>Manage Books, Students and Library Resources</p>
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="Home_page.html"><i class="fa-solid fa-chart-simple"></i> Dashboard</a></li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <select class="sidebar-select" onchange="navigateFromSidebar(this)">
+                        <option value="">Add member</option>
+                        <option value="Add_student.html">Add Students</option>
+                        <option value="Add_teacher.html">Add Teachers</option>
+                        <option value="Add_other_member.html">Other members</option>
+                    </select>
+                </div>
+            </li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label">
+                    <i class="fa-solid fa-user-minus"></i>
+                    <select class="sidebar-select" onchange="navigateFromSidebar(this)">
+                        <option value="">Remove member</option>
+                        <option value="Remove_student.html">Remove Students</option>
+                        <option value="Remove_teacher.html">Remove Teachers</option>
+                        <option value="Remove_other_member.html">Other members</option>
+                    </select>
+                </div>
+                <div class="sidebar-submenu"></div>
+            </li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label">
+                    <i class="fa-solid fa-book"></i>
+                    <select class="sidebar-select" onchange="navigateFromSidebar(this)">
+                        <option value="">Books Issue</option>
+                        <option value="Issue_student.html">Students</option>
+                        <option value="Issue_teacher.html">Teacher</option>
+                        <option value="Issue_other_member.html">Other members</option>
+                    </select>
+                </div>
+                <div class="sidebar-submenu"></div>
+            </li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <select class="sidebar-select" onchange="navigateFromSidebar(this)">
+                        <option value="">Return Books</option>
+                        <option value="Return_student.html">Students</option>
+                        <option value="Return_teacher.html">Teacher</option>
+                        <option value="Return_other_member.html">Other members</option>
+                    </select>
+                </div>
+                <div class="sidebar-submenu"></div>
+            </li>
+            <li><a href="#"><i class="fa-solid fa-file-lines"></i> Report</a></li>
+            <li><a href="#" class="help-link"><i class="fa-solid fa-circle-question help-icon"></i> Help</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <nav class="breadcrumb"><a href="Home_page.html">Dashboard</a><span>&rsaquo;</span><span>Other
+                Members</span><span>&rsaquo;</span><span class="active">Add Member</span></nav>
+        <div class="page-header">
+            <div class="header-icon">&#128101;</div>
+            <div>
+                <h2>Add Other Member</h2>
+                <p>Register staff, visitors or other library members</p>
+            </div>
+        </div>
+        <form class="card-form">
+            <div class="form-layout">
+                <div class="form-fields-grid">
+                    <div class="input-group"><label>Library Card No. <span class="req">*</span></label>
+                        <div class="input-wrapper"><span class="icon">🪪</span><input type="text" placeholder="Enter library card number" required></div>
+                    </div>
+                    <div class="input-group"><label>Member Name <span class="req">*</span></label>
+                        <div class="input-wrapper"><span class="icon">👤</span><input type="text" placeholder="Enter full name" required></div>
+                    </div>
+                    <div class="input-group"><label>Member Type <span class="req">*</span></label>
+                        <select class="select_of_main">
+                            <option value="">Select member type</option>
+                            <option>Library Staff</option>
+                            <option>Visitor</option>
+                            <option>Guest</option>
+                            <option>Researcher</option>
+                        </select>
+                    </div>
+                    <div class="input-group"><label>Organization</label>
+                        <div class="input-wrapper"><span class="icon">🏢</span><input type="text" placeholder="Enter organization"></div>
+                    </div>
+                    <div class="input-group"><label>Mobile Number <span class="req">*</span></label>
+                        <div class="input-wrapper"><span class="icon">📞</span><input type="tel" placeholder="Enter mobile number" required></div>
+                    </div>
+                    <div class="input-group"><label>Email ID</label>
+                        <div class="input-wrapper"><span class="icon">✉️</span><input type="email" placeholder="Enter email"></div>
+                    </div>
+                    <div class="input-group"><label>Valid Until <span class="req">*</span></label>
+                        <div class="input-wrapper"><span class="icon">📅</span><input type="date" required></div>
+                    </div>
+                    <div class="input-group full-width"><label>Address</label>
+                        <div class="input-wrapper"><span class="icon textarea-icon">🏠</span><textarea rows="2" placeholder="Enter address"></textarea></div>
+                    </div>
+                </div>
+                <div class="photo-section"><label class="photo-title">Member Photo</label>
+                    <div class="avatar-placeholder">&#128247;</div><label class="btn-upload">Upload Photo<input
+                            type="file" accept="image/png, image/jpeg"></label><span class="upload-note">JPG / PNG, Max
+                        2MB</span>
+                </div>
+            </div>
+            <div class="form-actions"><button type="submit" class="btn btn-primary">Add Member</button>
+                <button type="reset" class="btn btn-secondary">Clear</button></div>
+        </form>
+    </main>
+    <script src="website.js"></script>
+</body>
+
+</html>
