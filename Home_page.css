@@ -175,25 +175,6 @@ header i {
     cursor: pointer;
 
 }
-
-/* .admin_user:hover {
-    background-color: rgba(101, 101, 239, 0.72);
-    border-color: rgba(255, 255, 255, 0.6);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.admin_user:focus {
-    border-color: rgba(145, 214, 255, 0.9);
-    box-shadow: 0 0 0 4px rgba(115, 137, 150, 0.18),
-        0 8px 20px rgba(10, 12, 45, 0.25);
-}
-
-.admin_user option {
-    background-color: #636cd3;
-    color: white;
-    padding: 10px;
-} */
-
 .sidebar {
     grid-area: sidebar;
     position: static;
