@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Book to Member | Library Management</title>
+    <link rel="stylesheet" href="library_theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="member-form issue-book-page">
+    <header>
+        <h1>Library Management System</h1><i class="fa-solid fa-book-open" id="header-book"></i><i
+            class="fa-regular fa-bell" id="bell"></i><i class="fa-solid fa-user" id="user"></i><select
+            class="admin_user" onchange="window.location.href = this.value">
+            <option value="">Login</option>
+            <option value="login_page.html">Admin</option>
+        </select>
+        <p>Manage Books, Students and Library Resources</p>
+    </header>
+    <aside class="sidebar">
+        <ul>
+            <li><a href="Home_page.html"><i class="fa-solid fa-chart-simple"></i> Dashboard</a></li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label"><i class="fa-solid fa-user-plus"></i><select class="sidebar-select"
+                        onchange="navigateFromSidebar(this)">
+                        <option value="">Add member</option>
+                        <option value="Add_student.html">Add Students</option>
+                        <option value="Add_teacher.html">Add Teachers</option>
+                        <option value="Add_other_member.html">Other members</option>
+                    </select></div>
+            </li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label"><i class="fa-solid fa-user-minus"></i><select class="sidebar-select"
+                        onchange="navigateFromSidebar(this)">
+                        <option value="">Remove member</option>
+                        <option value="Remove_student.html">Remove Students</option>
+                        <option value="Remove_teacher.html">Remove Teachers</option>
+                        <option value="Remove_other_member.html">Other members</option>
+                    </select></div>
+            </li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label"><i class="fa-solid fa-book"></i><select class="sidebar-select"
+                        onchange="navigateFromSidebar(this)">
+                        <option value="">Books Issue</option>
+                        <option value="Issue_student.html">Students</option>
+                        <option value="Issue_teacher.html">Teacher</option>
+                        <option value="Issue_other_member.html" selected>Other members</option>
+                    </select></div>
+            </li>
+            <li class="sidebar-menu-item">
+                <div class="sidebar-menu-label"><i class="fa-solid fa-rotate-left"></i><select class="sidebar-select"
+                        onchange="navigateFromSidebar(this)">
+                        <option value="">Return Books</option>
+                        <option value="Return_student.html">Students</option>
+                        <option value="Return_teacher.html">Teacher</option>
+                        <option value="Return_other_member.html">Other members</option>
+                    </select></div>
+            </li>
+            <li><a href="#"><i class="fa-solid fa-file-lines"></i> Report</a></li>
+            <li><a href="#" class="help-link"><i class="fa-solid fa-circle-question help-icon"></i> Help</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <nav class="breadcrumb"><a href="Home_page.html">Dashboard</a><span>&rsaquo;</span><span>Other
+                Members</span><span>&rsaquo;</span><span class="active">Issue Book</span></nav>
+        <div class="page-header">
+            <div class="header-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+            <div>
+                <h2>Issue Book to Other Member</h2>
+                <p>Record a book issue for staff, visitors or guests</p>
+            </div>
+        </div>
+        <form class="card-form">
+            <div class="form-fields-grid">
+                <div class="input-group"><label>Member Card No. <span class="req">*</span></label>
+                    <div class="input-wrapper"><span class="icon"><i class="fa-solid fa-id-card" aria-hidden="true"></i></span><input type="text" placeholder="Enter member card number" required></div>
+                </div>
+                <div class="input-group"><label>Member Name</label>
+                    <div class="input-wrapper"><span class="icon"><i class="fa-solid fa-user" aria-hidden="true"></i></span><input type="text" placeholder="Enter member name"></div>
+                </div>
+                <div class="input-group"><label>Book Accession No. <span class="req">*</span></label>
+                    <div class="input-wrapper"><span class="icon"><i class="fa-solid fa-barcode" aria-hidden="true"></i></span><input type="text" placeholder="Enter book accession number" required></div>
+                </div>
+                <div class="input-group"><label>Book Name</label>
+                    <div class="input-wrapper"><span class="icon"><i class="fa-solid fa-book" aria-hidden="true"></i></span><input type="text" placeholder="Enter book name"></div>
+                </div>
+                <div class="input-group"><label>Issue Date <span class="req">*</span></label>
+                    <div class="input-wrapper"><span class="icon"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i></span><input type="date" required></div>
+                </div>
+                <div class="input-group"><label>Due Date <span class="req">*</span></label>
+                    <div class="input-wrapper"><span class="icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></span><input type="date" required></div>
+                </div>
+            </div>
+                <div class="form-actions"><button type="submit" class="btn btn-primary"><i class="fa-solid fa-book-open" aria-hidden="true"></i>Issue Book</button><button
+                    type="reset" class="btn btn-secondary"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i>Clear</button></div>
+        </form>
+    </main>
+    <script src="website.js"></script>
+</body>
+
+</html>

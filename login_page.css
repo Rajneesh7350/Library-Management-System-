@@ -1,0 +1,745 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    color: #14284b;
+
+}
+
+
+/* ==============================
+   MAIN PAGE
+============================== */
+
+.login-page {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px;
+
+    background:
+        linear-gradient(135deg,
+            #edf6ff,
+            #cfe2ff);
+
+}
+
+
+/* ==============================
+   MAIN CARD
+============================== */
+
+.login-card {
+
+    width: min(1000px, 100%);
+
+    background: white;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(32, 76, 130, 0.18);
+
+}
+
+
+/* ==============================
+   BRAND
+============================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 28px 42px 10px;
+
+}
+
+
+.book-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: #1769e8;
+
+    color: white;
+
+    font-size: 28px;
+
+}
+
+
+.brand h1 {
+
+    font-size: 24px;
+    margin-bottom: 5px;
+
+}
+
+.brand p {
+    color: #718096;
+    font-size: 14px;
+}
+
+/* ==============================
+   TWO PANELS
+============================== */
+
+.login-content {
+
+    display: flex;
+
+    min-height: 300px;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+.form-section,
+.info-section {
+
+    width: 50%;
+
+    transition:
+        transform 0.75s cubic-bezier(.68, -0.55, .27, 1.55);
+
+}
+
+
+/* ==============================
+   LOGIN SECTION
+============================== */
+
+.form-section {
+
+    padding: 30px 55px 50px;
+
+    background: white;
+
+}
+
+
+.form-section h2 {
+
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    color: #7b8799;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ==============================
+   INPUT
+============================== */
+
+.input-box {
+
+    height: 56px;
+
+    border: 1px solid #d6dfeb;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 16px;
+
+    margin-bottom: 18px;
+
+    transition: 0.2s;
+
+}
+
+
+.input-box:focus-within {
+
+    border-color: #1769e8;
+
+    box-shadow:
+        0 0 0 3px rgba(23, 105, 232, 0.10);
+
+}
+
+
+.input-box span {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7a90;
+    min-width: 18px;
+
+}
+
+
+.input-box span svg {
+
+    width: 18px;
+    height: 18px;
+    display: block;
+
+}
+
+
+.input-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+
+/* ==============================
+   PASSWORD BUTTON
+============================== */
+
+.eye {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+}
+
+
+/* ==============================
+   OPTIONS
+============================== */
+
+.options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 8px 0 25px;
+
+    font-size: 14px;
+
+}
+
+
+.options label {
+
+    display: flex;
+
+    gap: 7px;
+
+    align-items: center;
+
+}
+
+
+a {
+
+    color: #1769e8;
+
+    text-decoration: none;
+
+}
+
+
+/* ==============================
+   LOGIN BUTTON
+============================== */
+
+.login-btn {
+
+    width: 100%;
+
+    height: 54px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(90deg,
+            #1769e8,
+            #2783f5);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.login-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(23, 105, 232, 0.25);
+
+}
+
+
+/* ==============================
+   OR
+============================== */
+
+.or {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+    color: #9aa6b5;
+
+}
+
+
+.or::before,
+.or::after {
+
+    content: "";
+
+    height: 1px;
+
+    background: #dce3ec;
+
+    flex: 1;
+
+}
+
+
+/* ==============================
+   REGISTER
+============================== */
+
+.register {
+
+    text-align: center;
+
+    color: #69778a;
+
+}
+
+
+.register a {
+
+    font-weight: 600;
+
+}
+
+
+/* ==============================
+   LIBRARY PANEL
+============================== */
+
+.info-section {
+
+    position: relative;
+
+    padding: 55px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(145deg,
+            #dcecff,
+            #a8caff);
+
+}
+
+
+.info-section:hover {
+
+    box-shadow:
+        inset 0 0 0 3px rgba(255, 255, 255, 0.35);
+
+}
+
+
+/* ==============================
+   SWITCH BUTTON
+============================== */
+
+.switch-btn {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    z-index: 5;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.35);
+
+    color: #17345d;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.switch-btn:hover {
+
+    transform:
+        rotate(180deg) scale(1.08);
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+}
+
+
+/* ==============================
+   LIBRARY CONTENT
+============================== */
+
+.info-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.info-content h2 {
+
+    font-size: 42px;
+
+    line-height: 1.08;
+
+}
+
+
+.line {
+
+    width: 40px;
+
+    height: 4px;
+
+    background: #1769e8;
+
+    border-radius: 10px;
+
+    margin: 24px 0;
+
+}
+
+
+.info-content p {
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ==============================
+   ILLUSTRATION
+============================== */
+
+.illustration {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 20px;
+
+    width: 90%;
+
+    height: 60%;
+
+}
+
+
+.illustration>div {
+
+    position: absolute;
+
+    filter:
+        drop-shadow(0 10px 15px rgba(33, 75, 120, 0.18));
+
+}
+
+
+.books {
+
+    left: 8%;
+
+    bottom: 25%;
+
+    font-size: 75px;
+
+}
+
+
+.laptop {
+
+    right: 15%;
+
+    bottom: 27%;
+
+    font-size: 130px;
+
+}
+
+
+.open-book {
+
+    left: 35%;
+
+    bottom: 3%;
+
+    font-size: 95px;
+
+}
+
+
+.plant {
+
+    right: 2%;
+
+    bottom: 5%;
+
+    font-size: 75px;
+
+}
+
+
+/* ==================================
+   LEFT / RIGHT SWITCH ANIMATION
+================================== */
+
+
+/* Login moves to right */
+
+.login-content.switched .form-section {
+
+    transform:
+        translateX(100%);
+
+}
+
+
+/* Library moves to left */
+
+.login-content.switched .info-section {
+
+    transform:
+        translateX(-100%);
+
+}
+
+
+/* Switch button moves with panel */
+
+.login-content.switched .switch-btn {
+
+    right: auto;
+
+    left: 20px;
+
+}
+
+
+/* ==============================
+   TABLET / MOBILE
+============================== */
+
+@media (max-width: 800px) {
+
+    .brand {
+
+        padding: 25px;
+
+    }
+
+
+    .login-content {
+
+        flex-direction: column;
+
+    }
+
+
+    .form-section,
+    .info-section {
+
+        width: 100%;
+
+        transform: none !important;
+
+    }
+
+
+    .form-section {
+
+        order: 2;
+
+    }
+
+
+    .info-section {
+
+        order: 1;
+
+        min-height: 360px;
+
+    }
+
+
+    .login-content.switched .form-section {
+
+        transform:
+            translateY(-100%) !important;
+
+    }
+
+
+    .login-content.switched .info-section {
+
+        transform:
+            translateY(100%) !important;
+
+    }
+
+
+    .form-section {
+
+        padding: 35px 25px;
+
+    }
+
+
+    .info-content h2 {
+
+        font-size: 34px;
+
+    }
+
+}
+
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media (max-width: 480px) {
+
+    .login-page {
+
+        padding: 12px;
+
+    }
+
+
+    .brand h1 {
+
+        font-size: 18px;
+
+    }
+
+
+    .brand p {
+
+        font-size: 12px;
+
+    }
+
+
+    .form-section h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .options {
+
+        font-size: 12px;
+
+    }
+
+}
